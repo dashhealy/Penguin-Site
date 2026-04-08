@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  flex-direction: column;
+}
+
+.penguinSad {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8 1fr);
+  margin: 1000px;
+}
+
+#imgHead {
+  animation: rotate-animation ease-in;
+  animation-timeline: scroll();
+  width: 200px;
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  translate: 10px;
+}
+
+#imgBody {
+  width: 200px;
+  grid-column: 1;
+  grid-row: 4 / span 5;
+}
+
+@keyframes rotate-animation {
+  from {
+    transform: rotate(-20deg);
+  }
+  to {
+    transform: rotate(70deg);
+  }
+}
