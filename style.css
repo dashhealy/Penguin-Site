@@ -50,10 +50,10 @@ div {
 #wingL {
   animation: rotate-wingL ease-in;
   animation-timeline: scroll();
-  width: 200px;
+  width: 230px;
   grid-column: 1 / span 4;
   grid-row: 1;
-  translate: 10px 90px;
+  translate: 30px 90px;
 }
 #imgBody2 {
   width: 200px;
@@ -61,17 +61,17 @@ div {
   grid-row: 1;
 }
 #wingR {
-  animation: rotate-wingR ease-in;
+  animation: rotate-wingR reverse;
   animation-timeline: scroll();
-  width: 200px;
+  width: 230px;
   grid-column: 4 / span 4;
   grid-row: 1;
-  translate: -10px 90px;
+  translate: -30px 90px;
 }
 
 @keyframes rotate-wingL {
   from {
-    transform: rotate(-40deg);
+    transform: rotate(-60deg);
   }
   to {
     transform: rotate(75deg);
@@ -80,9 +80,9 @@ div {
 
 @keyframes rotate-wingR {
   from {
-    transform: rotate(-40deg);
+    transform: rotate(-75deg);
   }
   to {
-    transform: rotate(75deg);
+    transform: rotate(60deg);
   }
 }
