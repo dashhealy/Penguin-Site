@@ -7,9 +7,10 @@ body {
   align-items: center;
   flex-direction: column;
   border-style: solid;
-  border-width: 1.5rem;
+  border-width: 1rem;
   border-color: #69a5d5;
   padding: 0%;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -25,11 +26,49 @@ h1 {
   margin: 0%;
 }
 
+.smokestackCont {
+  display: grid;
+  grid-template-rows: repeat(5 1fr);
+  grid-template-columns: repeat(5 1fr);
+}
+
+#imgSmog {
+  grid-row: 1 / span 3;
+  grid-column: 1 / span 5;
+  width: 1900px;
+  animation: spin 20s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-100px);
+  }
+  50% {
+    transform: translate(100px);
+  }
+  100% {
+    transform: translate(-100px);
+  }
+}
+
+#imgSmokestack {
+  grid-row: 3 / span 3;
+  grid-column: 3 / span 2;
+  width: 300px;
+  translate: 0 20px;
+}
+
+#smokestackText {
+  grid-column: 2;
+  grid-row: 4;
+}
+
 .penguinCont {
   display: flex;
   flex-direction: row;
-  margin-top: 1000px;
-  margin-bottom: 1000px;
+  margin-top: 300px;
+  margin-bottom: 300px;
+  gap: 2rem;
 }
 
 .penguinSad {
